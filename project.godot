@@ -12,13 +12,12 @@ config_version=5
 
 config/name="PongOso"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"
 
 [display]
 
 window/size/viewport_width=160
 window/size/viewport_height=144
-window/size/mode=2
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
