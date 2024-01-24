@@ -8,7 +8,7 @@ var player_2_score = 0
 
 func _input(event):
 	if event.is_action_released("game_exit"):
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://title_screen.tscn")
 
 func _on_ball_player_1_goal_entered():
 	player_2_score += 1
