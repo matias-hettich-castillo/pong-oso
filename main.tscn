@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://k5r88lg05b6l"]
+[gd_scene load_steps=22 format=3 uid="uid://k5r88lg05b6l"]
 
 [ext_resource type="Script" path="res://scripts/main_controller.gd" id="1_7o2u5"]
 [ext_resource type="TileSet" uid="uid://b2orqg37cxw6u" path="res://assets/pongoso_tile_set.tres" id="2_pv8sg"]
@@ -6,11 +6,14 @@
 [ext_resource type="Script" path="res://scripts/player_1_score_value_controller.gd" id="5_12jnb"]
 [ext_resource type="Script" path="res://scripts/player_1_controller.gd" id="5_x547t"]
 [ext_resource type="Texture2D" uid="uid://dikf3aml4uqxe" path="res://assets/sprite-bar.png" id="6_4kxix"]
-[ext_resource type="Script" path="res://referee_controller.gd" id="6_hwd0l"]
+[ext_resource type="Script" path="res://scripts/referee_controller.gd" id="6_hwd0l"]
 [ext_resource type="Script" path="res://scripts/player_2_score_value_controller.gd" id="6_ln30w"]
 [ext_resource type="Script" path="res://scripts/player_2_controller.gd" id="7_vypta"]
 [ext_resource type="Script" path="res://scripts/ball_controller.gd" id="7_yi1fw"]
 [ext_resource type="Texture2D" uid="uid://lu6y5frh2q0u" path="res://assets/sprite-ball.png" id="8_4qk0g"]
+[ext_resource type="AudioStream" uid="uid://bl5rpikwh1mqq" path="res://assets/low beep.ogg" id="12_cp8ks"]
+[ext_resource type="AudioStream" uid="uid://celm5mk53gl1o" path="res://assets/ba-da 1.ogg" id="13_72lj3"]
+[ext_resource type="AudioStream" uid="uid://biynemsd3luh" path="res://assets/small victory chords.ogg" id="14_vy5qc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sdx40"]
 size = Vector2(4, 16)
@@ -83,10 +86,13 @@ offset_right = 156.0
 offset_bottom = 136.0
 theme = ExtResource("4_o0w3s")
 theme_override_font_sizes/font_size = 16
-text = "Play!"
+text = "Game Start!"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("6_hwd0l")
+
+[node name="ball_goal" type="AudioStreamPlayer" parent="gui/Referee"]
+stream = ExtResource("14_vy5qc")
 
 [node name="player_1" type="CharacterBody2D" parent="."]
 position = Vector2(6, 72)
@@ -118,6 +124,12 @@ texture = ExtResource("8_4qk0g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball"]
 shape = SubResource("RectangleShape2D_dmvlf")
+
+[node name="ball_bounce_wall" type="AudioStreamPlayer" parent="ball"]
+stream = ExtResource("12_cp8ks")
+
+[node name="ball_bounce_player" type="AudioStreamPlayer" parent="ball"]
+stream = ExtResource("13_72lj3")
 
 [node name="player_1_goal" type="Area2D" parent="."]
 collision_mask = 2

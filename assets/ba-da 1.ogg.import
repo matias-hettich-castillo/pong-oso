@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://celm5mk53gl1o"
+path="res://.godot/imported/ba-da 1.ogg-8f68d21a2db1cbe19455274bf4dce9a9.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/ba-da 1.ogg"
+dest_files=["res://.godot/imported/ba-da 1.ogg-8f68d21a2db1cbe19455274bf4dce9a9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
