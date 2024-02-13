@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 2
+var speed = 0.75
 var starting_position = position
 
 # Registers the player 1 input buttons

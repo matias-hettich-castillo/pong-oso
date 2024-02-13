@@ -1,12 +1,106 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnyb2n21no0s7"]
+[gd_scene load_steps=14 format=3 uid="uid://cnyb2n21no0s7"]
 
 [ext_resource type="Script" path="res://scripts/title_screen_controller.gd" id="1_4une4"]
 [ext_resource type="TileSet" uid="uid://b2orqg37cxw6u" path="res://assets/pongoso_tile_set.tres" id="1_qnaeg"]
-[ext_resource type="Theme" uid="uid://dvkf0af6fjr3i" path="res://assets/pong_oso_theme.tres" id="2_id157"]
+[ext_resource type="FontFile" uid="uid://caica6dyw5tia" path="res://assets/fonts/m3x6.ttf" id="3_rys1n"]
 [ext_resource type="Script" path="res://scripts/label_game_options_controller.gd" id="4_evm4f"]
 [ext_resource type="AudioStream" uid="uid://bb5r3nel0oej2" path="res://assets/3 i can swing a victory.ogg" id="5_lntmh"]
 [ext_resource type="AudioStream" uid="uid://bxptwpaotnipy" path="res://assets/menu beep 1.ogg" id="6_313ar"]
 [ext_resource type="AudioStream" uid="uid://caeq51y86kjv6" path="res://assets/menu beep 2.ogg" id="7_3c6xl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q05rc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxxuf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6gr3e"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxuvn"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgju8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_dwddl"]
+default_font = ExtResource("3_rys1n")
+default_font_size = 16
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/styles/disabled = SubResource("StyleBoxFlat_q05rc")
+Button/styles/focus = SubResource("StyleBoxFlat_yxxuf")
+Button/styles/hover = SubResource("StyleBoxFlat_6gr3e")
+Button/styles/normal = SubResource("StyleBoxFlat_dxuvn")
+Button/styles/pressed = SubResource("StyleBoxFlat_wgju8")
 
 [node name="title_screen" type="Node2D"]
 script = ExtResource("1_4une4")
@@ -25,7 +119,7 @@ offset_left = 12.0
 offset_top = 62.0
 offset_right = 148.0
 offset_bottom = 75.0
-theme = ExtResource("2_id157")
+theme = SubResource("Theme_dwddl")
 text = "2024 Matias Hettich "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -35,7 +129,7 @@ offset_left = 42.0
 offset_top = 87.0
 offset_right = 103.0
 offset_bottom = 100.0
-theme = ExtResource("2_id157")
+theme = SubResource("Theme_dwddl")
 text = "> P1 vs COM
 P1 vs P2 "
 horizontal_alignment = 2

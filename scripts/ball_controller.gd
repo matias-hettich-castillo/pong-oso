@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 signal player_1_goal_entered
 signal player_2_goal_entered
-signal reset_players
 
 # Soundfx for ball bounce
 @onready var ball_bounce_wall = $ball_bounce_wall
@@ -41,9 +40,8 @@ func reset_ball():
 	# Switch previous direction
 	velocity *= Vector2(-1, -1)
 	
-	# Reset position and reset player position
+	# Reset position
 	position = starting_position
-	emit_signal("reset_players")
 
 # When the ball enters the goal of player 1
 func _on_player_1_goal_body_entered(_body):

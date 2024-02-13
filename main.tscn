@@ -1,8 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://k5r88lg05b6l"]
+[gd_scene load_steps=28 format=3 uid="uid://k5r88lg05b6l"]
 
 [ext_resource type="Script" path="res://scripts/main_controller.gd" id="1_7o2u5"]
 [ext_resource type="TileSet" uid="uid://b2orqg37cxw6u" path="res://assets/pongoso_tile_set.tres" id="2_pv8sg"]
-[ext_resource type="Theme" uid="uid://dvkf0af6fjr3i" path="res://assets/pong_oso_theme.tres" id="4_o0w3s"]
+[ext_resource type="FontFile" uid="uid://caica6dyw5tia" path="res://assets/fonts/m3x6.ttf" id="3_31p55"]
 [ext_resource type="Script" path="res://scripts/player_1_score_value_controller.gd" id="5_12jnb"]
 [ext_resource type="Script" path="res://scripts/player_1_controller.gd" id="5_x547t"]
 [ext_resource type="Texture2D" uid="uid://dikf3aml4uqxe" path="res://assets/sprite-bar.png" id="6_4kxix"]
@@ -10,10 +10,104 @@
 [ext_resource type="Script" path="res://scripts/player_2_score_value_controller.gd" id="6_ln30w"]
 [ext_resource type="Script" path="res://scripts/player_2_controller.gd" id="7_vypta"]
 [ext_resource type="Script" path="res://scripts/ball_controller.gd" id="7_yi1fw"]
-[ext_resource type="Texture2D" uid="uid://lu6y5frh2q0u" path="res://assets/sprite-ball.png" id="8_4qk0g"]
+[ext_resource type="Texture2D" uid="uid://lu6y5frh2q0u" path="res://assets/sprite-ball.png" id="12_27hy3"]
 [ext_resource type="AudioStream" uid="uid://bl5rpikwh1mqq" path="res://assets/low beep.ogg" id="12_cp8ks"]
 [ext_resource type="AudioStream" uid="uid://celm5mk53gl1o" path="res://assets/ba-da 1.ogg" id="13_72lj3"]
 [ext_resource type="AudioStream" uid="uid://biynemsd3luh" path="res://assets/small victory chords.ogg" id="14_vy5qc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q05rc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxxuf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6gr3e"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxuvn"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wgju8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_dwddl"]
+default_font = ExtResource("3_31p55")
+default_font_size = 16
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/styles/disabled = SubResource("StyleBoxFlat_q05rc")
+Button/styles/focus = SubResource("StyleBoxFlat_yxxuf")
+Button/styles/hover = SubResource("StyleBoxFlat_6gr3e")
+Button/styles/normal = SubResource("StyleBoxFlat_dxuvn")
+Button/styles/pressed = SubResource("StyleBoxFlat_wgju8")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sdx40"]
 size = Vector2(4, 16)
@@ -58,7 +152,7 @@ offset_left = 4.0
 offset_top = 8.0
 offset_right = 76.0
 offset_bottom = 24.0
-theme = ExtResource("4_o0w3s")
+theme = SubResource("Theme_dwddl")
 theme_override_font_sizes/font_size = 16
 text = "P1 Score: 0"
 horizontal_alignment = 1
@@ -71,7 +165,7 @@ offset_left = 84.0
 offset_top = 8.0
 offset_right = 156.0
 offset_bottom = 24.0
-theme = ExtResource("4_o0w3s")
+theme = SubResource("Theme_dwddl")
 theme_override_font_sizes/font_size = 16
 text = "P2 Score: 0"
 horizontal_alignment = 1
@@ -84,7 +178,7 @@ offset_left = 5.0
 offset_top = 120.0
 offset_right = 156.0
 offset_bottom = 136.0
-theme = ExtResource("4_o0w3s")
+theme = SubResource("Theme_dwddl")
 theme_override_font_sizes/font_size = 16
 text = "Game Start!"
 horizontal_alignment = 1
@@ -120,7 +214,7 @@ collision_layer = 3
 script = ExtResource("7_yi1fw")
 
 [node name="Sprite2D" type="Sprite2D" parent="ball"]
-texture = ExtResource("8_4qk0g")
+texture = ExtResource("12_27hy3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ball"]
 shape = SubResource("RectangleShape2D_dmvlf")
@@ -161,7 +255,5 @@ shape = SubResource("RectangleShape2D_j1mlb")
 [connection signal="player_1_goal_entered" from="ball" to="gui/Referee" method="_on_ball_player_1_goal_entered"]
 [connection signal="player_2_goal_entered" from="ball" to="." method="_on_ball_player_2_goal_entered"]
 [connection signal="player_2_goal_entered" from="ball" to="gui/Referee" method="_on_ball_player_2_goal_entered"]
-[connection signal="reset_players" from="ball" to="player_1" method="_on_ball_reset_players"]
-[connection signal="reset_players" from="ball" to="player_2" method="_on_ball_reset_players"]
 [connection signal="body_entered" from="player_1_goal" to="ball" method="_on_player_1_goal_body_entered"]
 [connection signal="body_entered" from="player_2_goal" to="ball" method="_on_player_2_goal_body_entered"]
