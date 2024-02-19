@@ -18,8 +18,13 @@ Screenshots:
 ![Captura desde 2024-02-16 16-57-48](https://github.com/matias-hettich-castillo/pong-oso/assets/7623785/7583b824-68e5-4b60-a811-372c632a9a44)
 
 Credits:
+Fonts used in this project made by https://managore.itch.io/
 
-Music and sounds used for this project made by https://maygenko.itch.io/
+m3x6: https://managore.itch.io/m3x6​
+
+m5x7:​ https://managore.itch.io/m5x7​
+
+Music and sounds used in this project made by https://maygenko.itch.io/
 
 Music: https://maygenko.itch.io/retro-8-bit-rpg-music-pack-by-may-genko
 
