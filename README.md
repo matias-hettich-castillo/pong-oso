@@ -2,7 +2,7 @@
 
 This project was made in Godot as a part of me learning how to mess around with the engine. It was a fun ride of almost two weeks, way too long as I initially expected. Hope you enjoy it.
 
-You can play the game here: https://matiashettich.itch.io/pong-minigame-test
+You can play the game here: <a href="https://matiashettich.itch.io/pong-minigame-test">Pong Test<a/>
 
 <p align="center">
     <img src="https://github.com/matias-hettich-castillo/pong-oso/assets/7623785/a25595ac-796a-4ad9-af3e-98227db65c78" width="250" />
